@@ -25,7 +25,7 @@ class Product
   end
 
   def self.all_by_long(long_search)
-    modified = long_search.gsub(" ", "&")
+    modified = long_search.gsub(" ", "%20")
     service.all_by_long(modified)
   end
 end

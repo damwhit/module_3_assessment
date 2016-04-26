@@ -4,11 +4,11 @@ class BestBuyService
   end
 
   def all(product_search)
-    parse(connection.get "products((search=#{product_search}))", {show: "name, sku, customerReviewAverage,  shortDescription, salePrice, image", pageSize: "15", page: "1", format: "json", apiKey: key})
+    parse(connection.get "products((search=#{product_search}))", {show: "name, sku, customerReviewAverage, shortDescription, salePrice, image", pageSize: "15", page: "1", format: "json", apiKey: key})
   end
 
   def all_by_long(long_search)
-    c = connection.get "products(longDescription=#{long_search})", {show: "name, sku, customerReviewAverage, shortDescription, salePrice, image", format: "json", apiKey: key}
+    c = parse(connection.get "products(longDescription=#{long_search})", {show: "name, sku, customerReviewAverage, shortDescription, salePrice, image", pageSize: "15", page: "1", format: "json", apiKey: key})
     require "pry"; binding.pry
   end
 
