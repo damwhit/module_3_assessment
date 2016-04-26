@@ -1,12 +1,15 @@
-<div class="container-fluid">
-
+<div class="container">
   <h1>Product Search Results:</h1>
-  <% @products.each do |product| %>
-    <h6> product name: <%= product.name %> </h6>
-    <h6> sku: <%= product.sku %> </h6>
-    <h6> customer average review: <%= product.customer_average_review %> </h6>
-    <h6> sale price: <%= product.sale_price %> </h6>
-    <h6> <%= image_tag(product.image_url) %> </h6>
+  <% if !@products.empty? %>
+    <% @products.each do |product| %>
+      <h6> product name: <%= product.name %> </h6>
+      <h6> sku: <%= product.sku %> </h6>
+      <h6> customer average review: <%= product.customer_average_review %> </h6>
+      <h6> sale price: <%= product.sale_price %> </h6>
+      <h6> <%= image_tag(product.image_url) %> </h6>
+    <% end %>
+  <% else %>
+    <%= flash[:notice] = "search returned zero results" %>
+    <%= link_to "try again", '/' %>
   <% end %>
-
 </div>
