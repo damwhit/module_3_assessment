@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.2.5.1"
+gem "rails", "4.1.4"
 gem "sqlite3"
 gem "sass-rails", "~> 4.0.3"
 gem "uglifier", ">= 1.3.0"
@@ -13,7 +13,7 @@ gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem "figaro"
-gem 'responders', '~> 2.0'
+gem 'responders'
 gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 gem 'faraday'
 
