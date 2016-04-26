@@ -1,8 +1,12 @@
-<h1>Product Search Results:</h1>
-<% @products.each do |product| %>
-  <h6> product name: <%= product.name %> </h6>
-  <h6> sku: <%= product.sku %> </h6>
-  <h6> customer average review: <%= product.customer_average_review %> </h6>
-  <h6> sale price: <%= product.sale_price %> </h6>
-  <h6> <%= image_tag(product.image_url) %> </h6>
-<% end %>
+<div class="container-fluid">
+
+  <h1>Product Search Results:</h1>
+  <% @products.each do |product| %>
+    <h6> product name: <%= product.name %> </h6>
+    <h6> sku: <%= product.sku %> </h6>
+    <h6> customer average review: <%= product.customer_average_review %> </h6>
+    <h6> sale price: <%= product.sale_price %> </h6>
+    <h6> <%= image_tag(product.image_url) %> </h6>
+  <% end %>
+
+</div>
