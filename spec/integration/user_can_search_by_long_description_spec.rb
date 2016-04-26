@@ -20,7 +20,7 @@ RSpec.feature "user can search for products by long description" do
 
       expect(current_path).to eq('/search')
 
-      expect(page).to have_content('product name: Galaxy Audio - Headset Microphone - Beige')
+      expect(page).to have_content('product name: Sennheiser - CX 2.00G Earbud Headphones - White')
     end
   end
 end

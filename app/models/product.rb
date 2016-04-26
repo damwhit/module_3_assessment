@@ -25,7 +25,9 @@ class Product
   end
 
   def self.all_by_long(long_search)
-    modified = long_search.gsub(" ", "%20")
-    service.all_by_long(modified)
+    modified = long_search.gsub(" ", "%20") + "*"
+    service.all_by_long(modified)[:products].map {
+      |product| Product.new(product)
+    }
   end
 end
