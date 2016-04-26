@@ -23,4 +23,9 @@ class Product
       |product| Product.new(product)
     }
   end
+
+  def self.all_by_long(long_search)
+    modified = long_search.gsub(" ", "&")
+    service.all_by_long(modified)
+  end
 end
