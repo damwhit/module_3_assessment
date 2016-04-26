@@ -18,9 +18,9 @@ RSpec.feature "user can search for products" do
 
         expect(current_path).to eq('/search')
 
-        expect(Product.count).to eq(15)
+        # expect(@products.count).to eq(15)
 
-        expect(page).to have_content('sennheiser')
+        expect(page).to have_content('product name: Galaxy Audio - Headset Microphone - Beige')
 
       end
     end
